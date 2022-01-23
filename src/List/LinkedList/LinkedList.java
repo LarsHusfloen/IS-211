@@ -1,5 +1,7 @@
 package List.LinkedList;
 
+import List.Node.Node;
+
 public class LinkedList {
 
     public Node head;
@@ -38,16 +40,15 @@ public class LinkedList {
         return removedHead.data;
     }
 
-    public String printList() {
-        String output = "<head> ";
+    public String toString() {
         Node currentNode = this.head;
+        StringBuilder output = new StringBuilder("<head> ");
         while (currentNode != null) {
-            output += currentNode.data + " ";
+            output.append(currentNode.data).append(" ");
             currentNode = currentNode.getNextNode();
         }
-        output += "<tail>";
+        output.append("<tail>");
         System.out.println(output);
-        return output;
+        return output.toString();
     }
-
 }

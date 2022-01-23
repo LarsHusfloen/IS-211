@@ -1,5 +1,7 @@
 package List.DoubleLinkedList;
 
+import List.Node.Node;
+
 import java.util.Objects;
 
 public class DoubleLinkedList {
@@ -155,7 +157,7 @@ public class DoubleLinkedList {
         node2.setNextNode(temp);
     }
 
-    public String printList() {
+    public String toString() {
         Node currentNode = this.head;
         StringBuilder output = new StringBuilder("<head> ");
         while (currentNode != null) {

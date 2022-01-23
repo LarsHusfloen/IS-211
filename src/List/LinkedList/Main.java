@@ -10,6 +10,6 @@ public class Main {
         seasons.addToTail("fall");
         seasons.addToTail("winter");
         seasons.removeHead();
-        seasons.printList();
+        seasons.toString();
     }
 }

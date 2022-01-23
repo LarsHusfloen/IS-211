@@ -1,4 +1,4 @@
-package List.Queue;
+package List.Node;
 
 public class Node {
 

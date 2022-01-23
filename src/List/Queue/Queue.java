@@ -1,5 +1,7 @@
 package List.Queue;
 
+import List.LinkedList.LinkedList;
+
 public class Queue {
 
     public LinkedList queue;

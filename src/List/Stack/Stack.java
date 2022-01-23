@@ -1,5 +1,7 @@
 package List.Stack;
 
+import List.LinkedList.LinkedList;
+
 public class Stack {
 
     public LinkedList stack;
@@ -22,7 +24,7 @@ public class Stack {
     }
 
     public boolean isEmpty() {
-        return this.size == 0;
+        return this.size != 0;
     }
 
     public void push(String data) {
@@ -36,7 +38,7 @@ public class Stack {
     }
 
     public String pop() {
-        if(!isEmpty()){
+        if(isEmpty()){
             String data = this.stack.removeHead();
             this.size--;
             System.out.println("Removed " + data + "! Stack size is now " + this.size);
@@ -47,7 +49,7 @@ public class Stack {
     }
 
     public String peek() {
-        if(!isEmpty()){
+        if(isEmpty()){
             return this.stack.head.data;
         }
         return null;

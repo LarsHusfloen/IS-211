@@ -7,24 +7,24 @@ public class Main {
         list.addToHead("1");
         list.addToHead("2");
         list.addToHead("3");
-        list.printList();
+        list.toString();
         list.removeByData("2");
-        list.printList();
+        list.toString();
 
         DoubleLinkedList subway = new DoubleLinkedList();
         subway.addToHead("Times Square");
         subway.addToHead("Grand Central");
         subway.addToHead("Central Park");
-        subway.printList();
+        subway.toString();
         subway.addToTail("Penn Station");
         subway.addToTail("Wall Street");
         subway.addToTail("Brooklyn Bridge");
-        subway.printList();
+        subway.toString();
         subway.removeTail();
         subway.removeHead();
-        subway.printList();
+        subway.toString();
         subway.removeByData("Times Square");
-        subway.printList();
+        subway.toString();
 
         DoubleLinkedList testList = new DoubleLinkedList();
         char alphabet;
@@ -32,9 +32,9 @@ public class Main {
             testList.addToTail(String.valueOf(alphabet));
         }
 
-        testList.printList();
+        testList.toString();
         DoubleLinkedList.swapNodes(testList, "A", "E");
-        testList.printList();
+        testList.toString();
     }
 
 }
