@@ -1,4 +1,4 @@
-package List.BinarySearch;
+package LinearDataStructures.BinarySearch;
 
 public class Main {
 

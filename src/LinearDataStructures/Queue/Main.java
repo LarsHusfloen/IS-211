@@ -1,4 +1,4 @@
-package List.Queue;
+package LinearDataStructures.Queue;
 
 public class Main {
 
@@ -11,7 +11,7 @@ public class Main {
         coffeeOrder.enqueue("cappuccino");
 
 
-        String [] orders = {"green curry","pad thai","gyoza","cucumber salad","pad see ew", "brown rice","red curry","salad rolls"};
+        String[] orders = {"green curry", "pad thai", "gyoza", "cucumber salad", "pad see ew", "brown rice", "red curry", "salad rolls"};
         RestaurantOrders foodOrders = new RestaurantOrders();
         foodOrders.assign(orders);
     }

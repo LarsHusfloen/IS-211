@@ -1,4 +1,4 @@
-package List.Stack;
+package LinearDataStructures.Stack;
 
 public class PizzaDelivery {
 
@@ -11,7 +11,7 @@ public class PizzaDelivery {
         pizzaHouse = new Stack();
     }
 
-    public void assign(String [] pizzas) {
+    public void assign(String[] pizzas) {
         for (String pizza : pizzas) {
             try {
                 // 2. Push pizzas onto deliveryGal and print the update

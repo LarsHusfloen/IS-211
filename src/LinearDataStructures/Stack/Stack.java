@@ -1,12 +1,12 @@
-package List.Stack;
+package LinearDataStructures.Stack;
 
-import List.LinkedList.LinkedList;
+import LinearDataStructures.LinkedList.LinkedList;
 
 public class Stack {
 
+    static final int DEFAULT_MAX_SIZE = Integer.MAX_VALUE;
     public LinkedList stack;
     public int size;
-    static final int DEFAULT_MAX_SIZE = Integer.MAX_VALUE;
     public int maxSize;
 
     public Stack() {
@@ -19,6 +19,9 @@ public class Stack {
         this.maxSize = maxSize;
     }
 
+    public static void main(String[] args) {
+    }
+
     public boolean hasSpace() {
         return this.size < this.maxSize;
     }
@@ -28,7 +31,7 @@ public class Stack {
     }
 
     public void push(String data) {
-        if(hasSpace()){
+        if (hasSpace()) {
             this.stack.addToHead(data);
             this.size++;
             System.out.println("Added " + data + "! Stack size is now " + this.size);
@@ -38,7 +41,7 @@ public class Stack {
     }
 
     public String pop() {
-        if(isEmpty()){
+        if (isEmpty()) {
             String data = this.stack.removeHead();
             this.size--;
             System.out.println("Removed " + data + "! Stack size is now " + this.size);
@@ -49,12 +52,10 @@ public class Stack {
     }
 
     public String peek() {
-        if(isEmpty()){
+        if (isEmpty()) {
             return this.stack.head.data;
         }
         return null;
     }
-
-    public static void main(String[]args) { }
 
 }

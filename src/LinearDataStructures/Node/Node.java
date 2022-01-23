@@ -1,4 +1,4 @@
-package List.Node;
+package LinearDataStructures.Node;
 
 public class Node {
 
@@ -11,20 +11,20 @@ public class Node {
         this.next = null;
     }
 
-    public void setNextNode(Node node) {
-        this.next = node;
-    }
-
-    public void setPreviousNode(Node node) {
-        this.previous = node;
-    }
-
     public Node getNextNode() {
         return this.next;
     }
 
+    public void setNextNode(Node node) {
+        this.next = node;
+    }
+
     public Node getPreviousNode() {
         return this.previous;
+    }
+
+    public void setPreviousNode(Node node) {
+        this.previous = node;
     }
 
 }

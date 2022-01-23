@@ -1,8 +1,8 @@
-package List.LinkedList;
+package LinearDataStructures.LinkedList;
 
 public class Main {
 
-    public static void main(String []args) {
+    public static void main(String[] args) {
         // Write your code here:
         LinkedList seasons = new LinkedList();
         seasons.addToHead("summer");

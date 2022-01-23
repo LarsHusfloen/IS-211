@@ -1,12 +1,12 @@
-package List.Queue;
+package LinearDataStructures.Queue;
 
-import List.LinkedList.LinkedList;
+import LinearDataStructures.LinkedList.LinkedList;
 
 public class Queue {
 
+    static final int DEFAULT_MAX_SIZE = Integer.MAX_VALUE;
     public LinkedList queue;
     public int size;
-    static final int DEFAULT_MAX_SIZE = Integer.MAX_VALUE;
     public int maxSize;
 
     public Queue() {

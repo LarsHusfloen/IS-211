@@ -1,6 +1,6 @@
-package List.DoubleLinkedList;
+package LinearDataStructures.DoubleLinkedList;
 
-import List.Node.Node;
+import LinearDataStructures.Node.Node;
 
 import java.util.Objects;
 
@@ -12,6 +12,57 @@ public class DoubleLinkedList {
     public DoubleLinkedList() {
         this.head = null;
         this.tail = null;
+    }
+
+    public static void swapNodes(DoubleLinkedList list, String data1, String data2) {
+        System.out.println("Swapping " + data1 + " with " + data2);
+
+        Node node1Prev = null;
+        Node node2Prev = null;
+        Node node1 = list.head;
+        Node node2 = list.head;
+
+        if (Objects.equals(data1, data2)) {
+            System.out.println("Elements are the same - no swap to be made");
+            return;
+        }
+
+        while (node1 != null) {
+            if (Objects.equals(node1.data, data1)) {
+                break;
+            }
+            node1Prev = node1;
+            node1 = node1.getNextNode();
+        }
+
+        while (node2 != null) {
+            if (Objects.equals(node2.data, data2)) {
+                break;
+            }
+            node2Prev = node2;
+            node2 = node2.getNextNode();
+        }
+
+        if (node1 == null || node2 == null) {
+            System.out.println("Swap not possible - one or more element is not in the list");
+            return;
+        }
+
+        if (node1Prev == null) {
+            list.head = node2;
+        } else {
+            node1Prev.setNextNode(node2);
+        }
+
+        if (node2Prev == null) {
+            list.head = node1;
+        } else {
+            node2Prev.setNextNode(node1);
+        }
+
+        Node temp = node1.getNextNode();
+        node1.setNextNode(node2.getNextNode());
+        node2.setNextNode(temp);
     }
 
     public void addToHead(String data) {
@@ -93,9 +144,9 @@ public class DoubleLinkedList {
         if (nodeToRemove == null) {
             return null;
         }
-        if(nodeToRemove == head){
+        if (nodeToRemove == head) {
             removeHead();
-        } else if(nodeToRemove == tail){
+        } else if (nodeToRemove == tail) {
             removeTail();
         } else {
             Node nextNode = nodeToRemove.getNextNode();
@@ -104,57 +155,6 @@ public class DoubleLinkedList {
             previousNode.setNextNode(nextNode);
         }
         return nodeToRemove;
-    }
-
-    public static void swapNodes(DoubleLinkedList list, String data1, String data2) {
-        System.out.println("Swapping " + data1 + " with " + data2);
-
-        Node node1Prev = null;
-        Node node2Prev = null;
-        Node node1 = list.head;
-        Node node2 = list.head;
-
-        if (Objects.equals(data1, data2)) {
-            System.out.println("Elements are the same - no swap to be made");
-            return;
-        }
-
-        while (node1 != null) {
-            if (Objects.equals(node1.data, data1)) {
-                break;
-            }
-            node1Prev = node1;
-            node1 = node1.getNextNode();
-        }
-
-        while (node2 != null) {
-            if (Objects.equals(node2.data, data2)) {
-                break;
-            }
-            node2Prev = node2;
-            node2 = node2.getNextNode();
-        }
-
-        if (node1 == null || node2 == null) {
-            System.out.println("Swap not possible - one or more element is not in the list");
-            return;
-        }
-
-        if (node1Prev == null) {
-            list.head = node2;
-        } else {
-            node1Prev.setNextNode(node2);
-        }
-
-        if (node2Prev == null) {
-            list.head = node1;
-        } else {
-            node2Prev.setNextNode(node1);
-        }
-
-        Node temp = node1.getNextNode();
-        node1.setNextNode(node2.getNextNode());
-        node2.setNextNode(temp);
     }
 
     public String toString() {

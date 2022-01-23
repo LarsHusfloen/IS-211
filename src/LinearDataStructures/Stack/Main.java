@@ -1,9 +1,9 @@
-package List.Stack;
+package LinearDataStructures.Stack;
 
 public class Main {
 
-    public static void main(String[]args) {
-        String [] pizzas = {"pepperoni","cheese","veggie","meat","hawaiian", "margherita"};
+    public static void main(String[] args) {
+        String[] pizzas = {"pepperoni", "cheese", "veggie", "meat", "hawaiian", "margherita"};
         PizzaDelivery pizzaDelivery = new PizzaDelivery();
         pizzaDelivery.assign(pizzas);
         pizzaDelivery.deliver();
