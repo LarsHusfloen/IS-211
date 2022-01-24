@@ -21,4 +21,9 @@ public class HashMap {
         int arrayIndex = this.hash(key);
         this.hashmap[arrayIndex] = value;
     }
+
+    public String retrieve(String key){
+        int arrayIndex = this.hash(key);
+        return this.hashmap[arrayIndex];
+    }
 }
