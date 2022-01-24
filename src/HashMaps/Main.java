@@ -8,5 +8,10 @@ public class Main {
         HashMap employees = new HashMap(3);
         employees.assign("34-567", "Mara");
         System.out.println(Arrays.toString(employees.hashmap));
+
+
+        HashMap aboutMe = new HashMap(3);
+        aboutMe.assign("myFavoriteColor", "brown");
+        System.out.println(aboutMe.retrieve("myFavoriteColor"));
     }
 }
